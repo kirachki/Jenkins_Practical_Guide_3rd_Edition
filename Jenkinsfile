@@ -17,7 +17,7 @@ pipeline {
             steps { bat "mvn clean package" 
             }
         }
-    
+     
         stage(' テスト 結果 の 集計') { 
             steps {
                 // JUnit テスト 結果 の 集計 
