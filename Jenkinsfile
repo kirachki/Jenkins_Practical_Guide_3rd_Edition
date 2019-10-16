@@ -6,7 +6,7 @@ pipeline {
     }    
     
     stages { 
-        stage(' チェック アウト') { 
+        stage(' out1@@@@@@@@@@@@@@@@') { 
             steps { 
                 // Git リポジトリ の 指定 
                 git url: 'https://github.com/kirachki/Jenkins_Practical_Guide_3rd_Edition.git'
