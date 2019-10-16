@@ -62,32 +62,33 @@ public class SampleActionTest {
 		assertEquals(false, result);
 	}
 	
-	@Test
-	public void testCheckError3() {
-		SampleAction action = new SampleAction();
-		HttpServletRequest request = createMock(HttpServletRequest.class);
+//	@Test
+//	public void testCheckError3() {
+//		SampleAction action = new SampleAction();
+//		HttpServletRequest request = createMock(HttpServletRequest.class);
+//
+//		expect(request.getParameter("FirstName")).andReturn("");
+//
+//		replay(request);
+//		boolean result = action.checkParameter(request);
+//		verify(request);
+//
+//		assertEquals(false, result);
+//	}
 
-		expect(request.getParameter("FirstName")).andReturn("");
+//	@Test
+//	public void testExecuteNormal() {
+//		SampleAction action = new SampleAction("firstName", "lastName");
+//		HttpServletRequest request = createMock(HttpServletRequest.class);
+//		HttpSession session = createMock(HttpSession.class);
+//
+//		expect(request.getSession(true)).andReturn(session);
+//
+//		replay(request);
+//		String result = action.execute(request);
+//		verify(request);
+//
+//		assertTrue("./WEB-INF/result.jsp".equals(result));
+//	}
 
-		replay(request);
-		boolean result = action.checkParameter(request);
-		verify(request);
-
-		assertEquals(false, result);
-	}
-
-	@Test
-	public void testExecuteNormal() {
-		SampleAction action = new SampleAction("firstName", "lastName");
-		HttpServletRequest request = createMock(HttpServletRequest.class);
-		HttpSession session = createMock(HttpSession.class);
-
-		expect(request.getSession(true)).andReturn(session);
-
-		replay(request);
-		String result = action.execute(request);
-		verify(request);
-
-		assertTrue("./WEB-INF/result.jsp".equals(result));
-	}
 }
